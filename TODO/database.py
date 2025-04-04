@@ -5,6 +5,6 @@ SQL_ALCHEMY_DATABASE_URL = "sqlite:///./todo.db"
 
 engine = create_engine(SQL_ALCHEMY_DATABASE_URL,connect_args = {"check_same_thread":False})
 
-session = sessionmaker(auto_commit = False,bind = engine,autoflush = False)
+SessionLocal = sessionmaker(autocommit = False,bind = engine,autoflush = False)
 
 Base = declarative_base()
